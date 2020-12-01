@@ -1,0 +1,23 @@
+server:
+  port: 8080
+spring:
+  thymeleaf:
+    cache: false
+dubbo:
+  consumer:
+    check: false
+  registry:
+    address: zookeeper://192.168.184.188:2181
+  application:
+    name: web-goods
+    #配置fastDFS
+fdfs:
+  pool:
+    jmx-enabled: false
+  #配置缩略图
+  thumb-image:
+    width: 100
+    height: 100
+  #配置追踪者的地址
+  tracker-list:
+    - 192.168.184.188:22122

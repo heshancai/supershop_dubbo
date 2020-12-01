@@ -1,0 +1,20 @@
+dubbo:
+  application:
+    name: service-search
+  registry:
+    address: zookeeper://192.168.184.188:2181
+  protocol:
+    port: -1
+  consumer:
+    check: false
+spring:
+  data:
+    solr:
+      host: http://192.168.184.188:8983/solr/mycollection
+  #消息队列的配置
+  rabbitmq:
+    virtual-host: /admin
+    host: 192.168.184.188
+    username: user
+    password: user
+    port: 5672

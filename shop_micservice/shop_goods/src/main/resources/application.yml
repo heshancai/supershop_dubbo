@@ -1,0 +1,29 @@
+dubbo:
+  application:
+    name: service-goods
+  registry:
+    address: zookeeper://192.168.184.188:2181
+  consumer:
+    check: false
+  protocol:
+    port: -1
+spring:
+  datasource:
+    url: jdbc:mysql:///shop1909?serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  rabbitmq:
+    host: 192.168.184.188
+    username: user
+    password: user
+    virtual-host: /admin
+    port: 5672
+  redis:
+    host: 192.168.184.188
+#配置消息队列的消息
+mybatis-plus:
+  mapper-locations: classpath:com/qf/dao/*.xml
+  configuration:
+    #mybatis会在控制台打印执行sql语句-可以配置mybatis-logs插件使用
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

@@ -1,0 +1,12 @@
+server:
+  port: 8081
+dubbo:
+  consumer:
+    check: false
+  registry:
+    address: zookeeper://192.168.184.188:2181
+  application:
+    name: web-search
+spring:
+  thymeleaf:
+    cache: false
